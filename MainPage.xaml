@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="CSharp.UWP.App.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid x:Name="gdMain">
+        <NavigationView
+            x:Name="NavTopLevelNav"
+            PaneDisplayMode="Left"
+            BackRequested="NavTopLevelNav_BackRequested"
+            Header="Google Best and Most Expensive Products"
+            IsBackEnabled="{Binding ElementName=contentFrame, Path=CanGoBack}"
+            IsTabStop="False"
+            ItemInvoked="NavTopLevelNav_ItemInvoked"
+            Loaded="NavTopLevelNav_Loaded">
+            <NavigationView.MenuItems>
+                <NavigationViewItem
+                    Content="Earbuds"
+                    Tag="Earbuds_Page"
+                    Visibility="Visible">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/menu/icons8-earbud_headphones.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Content="Watchs"
+                    Tag="Watchs_Page"
+                    Visibility="Visible">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/menu/icons8-apple_watch.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Content="Thermostat"
+                    Tag="Thermostats_Page"
+                    Visibility="Visible">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/menu/icons8-smart_home_connection.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Content="Laptops"
+                    Tag="Laptops_Page"
+                    Visibility="Collapsed">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/menu/icons8-laptop.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Content="Accessories"
+                    Tag="Accessories_Page"
+                    Visibility="Visible">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/menu/icons8-misc.png" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame x:Name="contentFrame" />
+        </NavigationView>
+    </Grid>
+</Page>

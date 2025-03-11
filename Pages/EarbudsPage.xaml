@@ -1,0 +1,258 @@
+﻿<Page
+    x:Class="CSharp.UWP.App.Pages.EarbudsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:CSharp.UWP.App.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid Width="auto">
+        <ScrollViewer Margin="0,30,0,0" Padding="10">
+            <StackPanel
+                Margin="0,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top">
+                <!--  Top Page Header  -->
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    Style="{StaticResource page_nav_header}"
+                    Text="Earbuds that sound great all day" />
+
+                <!--  Promotional Items  -->
+
+                <GridView Margin="0,30,0,0" HorizontalAlignment="Center">
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapGrid
+                                ItemHeight="250"
+                                ItemWidth="150"
+                                MaximumRowsOrColumns="4"
+                                Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                    <StackPanel Margin="5,5,5,5">
+                        <Image
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Source="/Assets/earbuds/pixelbuds-pro.png"
+                            Stretch="UniformToFill" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontSize="12"
+                            Text="New" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontSize="12"
+                            Text="Pixel Buds Pro" />
+                    </StackPanel>
+                    <StackPanel Margin="5,5,5,5">
+                        <Image
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Source="/Assets/earbuds/pixelbuds-a-series.png"
+                            Stretch="UniformToFill" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontSize="12"
+                            Text="New"
+                            Visibility="Collapsed" />
+                        <TextBlock
+                            Margin="0,15,0,0"
+                            HorizontalAlignment="Center"
+                            FontSize="12"
+                            Text="Pixel Buds A-Series" />
+                    </StackPanel>
+                    <StackPanel Margin="5,5,5,5">
+                        <Image
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Source="/Assets/earbuds/compare-earbuds.png"
+                            Stretch="UniformToFill" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontSize="12"
+                            Text="New"
+                            Visibility="Collapsed" />
+                        <TextBlock
+                            Margin="0,15,0,0"
+                            HorizontalAlignment="Center"
+                            FontSize="12"
+                            Text="Compare Earbuds" />
+                    </StackPanel>
+                    <StackPanel Margin="5,5,5,5">
+                        <Image
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Source="/Assets/earbuds/cables.png"
+                            Stretch="UniformToFill" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            FontSize="12"
+                            Text="New"
+                            Visibility="Collapsed" />
+                        <TextBlock
+                            Margin="0,15,0,0"
+                            HorizontalAlignment="Center"
+                            FontSize="12"
+                            Text="Accessories" />
+                    </StackPanel>
+
+                </GridView>
+
+
+                <!--  Top Sellers  -->
+
+
+                <!--  Marketing Promo Product  -->
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    Style="{StaticResource page_nav_header}"
+                    Text="Accessories to keep you moving." />
+                <HyperlinkButton
+                    Margin="23"
+                    HorizontalAlignment="Center"
+                    Content="See All accessories &gt;"
+                    Style="{StaticResource NoUnderlineHyperlinkButton}" />
+
+                <Grid HorizontalAlignment="Left">
+
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel x:Name="Promo1" Padding="8">
+                            <Grid
+                                Width="275"
+                                Height="275"
+                                Background="#F8F9FA"
+                                BorderBrush="#F8F9FA"
+                                BorderThickness="12"
+                                CornerRadius="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <Image
+                                        Grid.Column="0"
+                                        Width="250"
+                                        Height="250"
+                                        Source="/Assets/earbuds/cables.png"
+                                        Stretch="UniformToFill" />
+                                </StackPanel>
+
+                            </Grid>
+                            <TextBlock
+                                Margin="0,15,0,0"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                Foreground="White"
+                                Text="Google USB-C to USB-C Cable" />
+                            <TextBlock
+                                Margin="0,15,0,0"
+                                FontSize="16"
+                                FontWeight="Normal"
+                                Foreground="White"
+                                Text="CA$25" />
+                            <Button
+                                Width="120"
+                                Height="40"
+                                Margin="0,40,0,0"
+                                HorizontalAlignment="Left"
+                                Content="Learn more"
+                                FontFamily="Montserrat"
+                                FontWeight="Bold"
+                                Style="{StaticResource promo-button}" />
+                        </StackPanel>
+                        <StackPanel x:Name="Promo2" Padding="8">
+                            <Grid
+                                Width="275"
+                                Height="275"
+                                Background="#F8F9FA"
+                                BorderBrush="#F8F9FA"
+                                BorderThickness="12"
+                                CornerRadius="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <Image
+                                        Grid.Column="0"
+                                        Width="250"
+                                        Height="250"
+                                        Source="/Assets/earbuds/google-30wusb-c.png"
+                                        Stretch="UniformToFill" />
+                                </StackPanel>
+
+                            </Grid>
+                            <TextBlock
+                                Margin="0,15,0,0"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                Foreground="White"
+                                Text="Google 30W USB-C Power Charger" />
+                            <TextBlock
+                                Margin="0,15,0,0"
+                                FontSize="16"
+                                FontWeight="Normal"
+                                Foreground="White"
+                                Text="CA$35" />
+                            <Button
+                                Width="120"
+                                Height="40"
+                                Margin="0,40,0,0"
+                                HorizontalAlignment="Left"
+                                Content="Learn more"
+                                FontFamily="Montserrat"
+                                FontWeight="Bold"
+                                Style="{StaticResource promo-button}" />
+                        </StackPanel>
+                        <StackPanel x:Name="Promo3" Padding="8">
+                            <Grid
+                                Width="275"
+                                Height="275"
+                                Background="#F8F9FA"
+                                BorderBrush="#F8F9FA"
+                                BorderThickness="12"
+                                CornerRadius="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <Image
+                                        Grid.Column="0"
+                                        Width="250"
+                                        Height="250"
+                                        Source="/Assets/earbuds/pixelstand-2gen.png"
+                                        Stretch="UniformToFill" />
+                                </StackPanel>
+
+                            </Grid>
+                            <TextBlock
+                                Margin="0,15,0,0"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                Foreground="White"
+                                Text="Pixel Stand (2nd gen)" />
+                            <TextBlock
+                                Margin="0,15,0,0"
+                                FontSize="16"
+                                FontWeight="Normal"
+                                Foreground="White"
+                                Text="CA$109" />
+                            <Button
+                                Width="120"
+                                Height="40"
+                                Margin="0,40,0,0"
+                                HorizontalAlignment="Left"
+                                Content="Learn more"
+                                FontFamily="Montserrat"
+                                FontWeight="Bold"
+                                Style="{StaticResource promo-button}" />
+                        </StackPanel>
+                    </StackPanel>
+
+                </Grid>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
